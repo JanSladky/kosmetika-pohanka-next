@@ -1,6 +1,7 @@
 "use client";
 
 import { useKeenSlider } from "keen-slider/react";
+import type { KeenSliderInstance } from "keen-slider";
 import "keen-slider/keen-slider.min.css";
 
 const references = [
@@ -31,8 +32,8 @@ const references = [
   },
 ];
 
-function AutoplayPlugin(slider: any) {
-  let timeout: any;
+function AutoplayPlugin(slider: KeenSliderInstance) {
+  let timeout: ReturnType<typeof setTimeout>;
   let mouseOver = false;
 
   function clearNextTimeout() {

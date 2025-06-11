@@ -14,25 +14,10 @@ const sliderImages = [
   { src: "/images/carousel/img3.jpg", alt: "Úvodní obrázek 3" },
 ];
 
-const services = [
-  { id: "ipl", title: "IPL Mediswiss", image: "/services/ipl.jpg" },
-  { id: "makeup", title: "Make-up", image: "/services/makeup.jpg" },
-  { id: "kosmetika", title: "Kosmetika", image: "/services/kosmetika.jpg" },
-  { id: "pmu", title: "Permanentní make-up", image: "/services/permanentnimakeup.jpg" },
-  { id: "elektrok", title: "Elektrokoagulace", image: "/services/elektrokoagulace.jpg" },
-  { id: "radiolifting", title: "Radiofrekvenční lifting", image: "/services/radiolifting.jpg" },
-];
-
 export default function HomePage() {
   const [sliderRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     slides: { perView: 1 },
-  });
-
-  const [refSliderRef] = useKeenSlider<HTMLDivElement>({
-    loop: true,
-    slides: { perView: 2, spacing: 10 },
-    mode: "snap",
   });
 
   return (
