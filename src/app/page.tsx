@@ -1,103 +1,87 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import { useState } from "react";
+import { LazyImage } from "@/components/LazyImage";
+import Link from "next/link";
+import ServiceList from "@/components/ServiceList";
+import ReferenceCarousel from "@/components/ReferenceCarousel";
+
+const sliderImages = [
+  { src: "/images/carousel/img1.jpg", alt: "Úvodní obrázek 1" },
+  { src: "/images/carousel/img2.jpg", alt: "Úvodní obrázek 2" },
+  { src: "/images/carousel/img3.jpg", alt: "Úvodní obrázek 3" },
+];
+
+const services = [
+  { id: "ipl", title: "IPL Mediswiss", image: "/services/ipl.jpg" },
+  { id: "makeup", title: "Make-up", image: "/services/makeup.jpg" },
+  { id: "kosmetika", title: "Kosmetika", image: "/services/kosmetika.jpg" },
+  { id: "pmu", title: "Permanentní make-up", image: "/services/permanentnimakeup.jpg" },
+  { id: "elektrok", title: "Elektrokoagulace", image: "/services/elektrokoagulace.jpg" },
+  { id: "radiolifting", title: "Radiofrekvenční lifting", image: "/services/radiolifting.jpg" },
+];
+
+export default function HomePage() {
+  const [sliderRef] = useKeenSlider<HTMLDivElement>({
+    loop: true,
+    slides: { perView: 1 },
+  });
+
+  const [refSliderRef] = useKeenSlider<HTMLDivElement>({
+    loop: true,
+    slides: { perView: 2, spacing: 10 },
+    mode: "snap",
+  });
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="font-sans">
+      {/* Carousel */}
+      <div className="hidden lg:block">
+        <div ref={sliderRef} className="keen-slider h-screen relative overflow-hidden">
+          {sliderImages.map((img, i) => (
+            <div key={i} className="keen-slider__slide relative w-full h-screen">
+              <LazyImage src={img.src} alt={img.alt} objectFit="cover" className="w-full h-full" />
+              {/* Scroll indikátor */}
+              <a href="#intro" className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+                <svg className="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </a>
+            </div>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+      <div className="block lg:hidden h-[60px]" />
+
+      {/* Úvodní blok textu */}
+      <section id="intro" className="bg-white scroll-mt-[60px] py-12 px-4 max-w-4xl mx-auto text-left">
+        <h1 className="text-3xl font-bold mb-4 text-gray-800">Vítejte na webu kosmetického studia</h1>
+        <p className="text-lg text-gray-700 leading-relaxed">
+          snoubí se zde krása, péče a relaxace. Jsme tu, abychom vám nabídli nejen kosmetické služby, ale také chvíle klidu a pohody. Pokud máte problémy s akné
+          nebo jinými kožními potížemi naše kosmetické studio nabízí odborné ošetření na míru s individuálním přístupem a ověřenými technikami. Naše služby jsou
+          zaměřené nejen na léčbu, ale i na prevenci, abychom vám pomohli dosáhnout zdravé a krásné pleti.
+        </p>
+        <p className="text-lg mt-3 text-gray-700 leading-relaxed">
+          Specializujeme se také na profesionální make-up a maskérské služby. Ať už se připravujete na důležitou událost, svatbu nebo chcete jen oslnit svým
+          vzhledem. Od jemného denního líčení až po extravagantní večerní. Jsme připraveni proměnit vaše představy v realitu..
+        </p>
+      </section>
+
+      {/* Komponenta se službami */}
+      <section className="bg-gray-100 py-12 px-4 text-center">
+        <section className="bg-gray-100 py-12 px-4 text-center">
+          <h2 className="text-2xl font-semibold mb-8 text-gray-800">Nabídka služeb</h2>
+          <ServiceList />
+        </section>
+      </section>
+
+      {/* Carousel referencí */}
+      <section className="py-12 px-4 bg-white text-center">
+        <h2 className="text-2xl font-semibold mb-8 text-gray-800">Reference</h2>
+        <ReferenceCarousel />
+      </section>
+    </main>
   );
 }
