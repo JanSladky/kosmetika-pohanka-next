@@ -44,8 +44,8 @@ export default function HomePage() {
             <div key={i} className="keen-slider__slide relative w-full h-screen">
               <LazyImage src={img.src} alt={img.alt} objectFit="cover" className="w-full h-full" />
               {/* Scroll indikátor */}
-              <a href="#intro" className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-                <svg className="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <a href="#intro" className="absolute bottom-6 left-1/2 -translate-x-1/2 transform animate-bounce z-20 flex justify-center items-center">
+                <svg className="w-[150px] h-[150px] text-[#7FA9EC] opacity-80" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </a>

@@ -38,18 +38,19 @@ export default function ClientLayout({ children }: { children: ReactNode }) {
           </button>
 
           {/* Desktop menu – až od LG */}
-          <nav className="hidden lg:flex flex-wrap gap-x-4 gap-y-2 font-medium max-w-full">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`px-3 py-2 rounded transition-colors ${
-                  pathname === item.href ? "text-[#009ddc] font-semibold" : "text-gray-800 hover:text-blue-600"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
+          <nav className="hidden lg:flex flex-wrap gap-x-2 gap-y-2 font-medium max-w-full">
+            {navItems.map((item) => {
+              const isActive = pathname === item.href; // ← tato řádka musí být zde
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`px-3 py-2 rounded transition-colors ${isActive ? "bg-[#9FBEF4] text-black font-bold" : "text-black hover:bg-gray-200"}`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
         </div>
 

@@ -5,6 +5,7 @@ import Captions from "yet-another-react-lightbox/plugins/captions";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import { LazyImage } from "../../../components/LazyImage";
+import ServiceDetailButtons from "@/components/ServiceDetailButtons";
 
 const images = [
   {
@@ -307,7 +308,6 @@ const images = [
     title: "Blbej den - TV seznam",
     description: "Blbej den - TV seznam",
   },
- 
 ];
 
 export default function MakeupPage() {
@@ -315,7 +315,13 @@ export default function MakeupPage() {
   return (
     <main className="px-4 py-12 max-w-5xl mx-auto">
       <h1 className="text-4xl font-bold text-left mb-8 text-gray-800">Make-up / maskérství</h1>
-      <p className="text-lg text-gray-700 mb-8 leading-relaxed">Nabízíme profesionální make-up a maskérské služby pro každou příležitost. Ať už potřebujete dokonalý make-up na svatbu, večírek, nebo speciální událost, nebo hledáte odborníka na filmové, divadelní nebo speciální efekty, jsme tu pro vás. Pracujeme s nejlepšími produkty a technikami, aby jsme vytvořili vzhled, který bude nejen krásný, ale také dlouhotrvající. Každý náš klient je pro nás jedinečný, a proto se zaměřujeme na individuální přístup, který zohledňuje vaše přání a potřeby. Objednejte se u nás a zažijte profesionální péči, která vás promění k dokonalosti.</p>
+      <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+        Nabízíme profesionální make-up a maskérské služby pro každou příležitost. Ať už potřebujete dokonalý make-up na svatbu, večírek, nebo speciální událost,
+        nebo hledáte odborníka na filmové, divadelní nebo speciální efekty, jsme tu pro vás. Pracujeme s nejlepšími produkty a technikami, aby jsme vytvořili
+        vzhled, který bude nejen krásný, ale také dlouhotrvající. Každý náš klient je pro nás jedinečný, a proto se zaměřujeme na individuální přístup, který
+        zohledňuje vaše přání a potřeby. Objednejte se u nás a zažijte profesionální péči, která vás promění k dokonalosti.
+      </p>
+      <ServiceDetailButtons pricelistId="makeup" />
       <h2 className="text-2xl font-semibold text-gray-800 mb-4">Fotogalerie</h2>
 
       <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-7 gap-4">

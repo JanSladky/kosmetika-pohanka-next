@@ -3,6 +3,7 @@ import React from "react";
 import AccordionSection from "@/components/AccordionSection";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import CenikDetailButtons from "@/components/CenikDetailButtons";
 
 const ceniky: Record<
   string,
@@ -271,12 +272,7 @@ export default function CenikDetailPage({ params }: { params: Promise<{ id: stri
           </ul>
         </AccordionSection>
       ))}
-
-      <div className="mt-10 text-center">
-        <Link href="/cenik">
-          <button className="bg-gray-800 text-white px-6 py-2 rounded hover:bg-gray-700">Zpět na rozcestník ceníku</button>
-        </Link>
-      </div>
+      <CenikDetailButtons />
     </main>
   );
 }

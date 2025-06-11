@@ -7,6 +7,7 @@ import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import { LazyImage } from "../../../components/LazyImage";
 import Skeleton from "../../../components/Skeleton";
+import ServiceDetailButtons from "@/components/ServiceDetailButtons";
 
 const images = [
   {
@@ -96,6 +97,7 @@ export default function IPLPage() {
         Samotný zákrok trvá cca 30–45 minut v závislosti na ošetřované oblasti. Doporučená kúra je 6–8 ošetření s rozestupem 3–4 týdnů. Vše závisí na
         individuální citlivosti pacienta.
       </p>
+       <ServiceDetailButtons pricelistId="ipl" />
 
       <h2 className="text-2xl font-semibold text-gray-800 mb-4">Fotogalerie</h2>
 

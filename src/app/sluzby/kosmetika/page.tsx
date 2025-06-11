@@ -6,6 +6,7 @@ import Captions from "yet-another-react-lightbox/plugins/captions";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import { LazyImage } from "../../../components/LazyImage";
+import ServiceDetailButtons from "@/components/ServiceDetailButtons";
 
 const images = [
   {
@@ -49,7 +50,7 @@ export default function KosmetikaPage() {
           pleť, aplikovaná a doporučována dermatology k obnovení, vyhlazení a zdokonalení pleti.
         </li>
       </ul>
-
+      <ServiceDetailButtons pricelistId="kosmetika" />
       <h2 className="text-2xl font-semibold text-gray-800 mb-4 mt-10">Fotogalerie</h2>
 
       <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-7 gap-4">
