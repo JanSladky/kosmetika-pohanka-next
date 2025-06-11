@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import AccordionSection from "@/components/AccordionSection";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -250,9 +250,9 @@ const ceniky: Record<
   },
 };
 
-export default function CenikDetailPage({ params }: { params: { id: string } }) {
-  const cenik = ceniky[params.id];
-  if (!cenik) return notFound();
+export default function CenikDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = React.use(params);
+  const cenik = ceniky[id];
 
   return (
     <main className="max-w-5xl mx-auto px-4 py-12">
