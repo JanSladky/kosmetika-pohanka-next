@@ -26,61 +26,63 @@ export default function ClientLayout({ children }: { children: ReactNode }) {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full bg-[#f1f1f1] shadow z-50">
-        <div className="max-w-7xl mx-auto px-3 py-2 flex justify-between items-center">
-          <Link href="/">
-            <Image src="/logo.png" alt="Videojinak logo" width={60} height={40} priority />
-          </Link>
+      <div className="flex flex-col min-h-screen">
+        <header className="fixed top-0 left-0 w-full bg-[#f1f1f1] shadow z-50">
+          <div className="max-w-7xl mx-auto px-3 py-2 flex justify-between items-center">
+            <Link href="/">
+              <Image src="/logo.png" alt="Videojinak logo" width={60} height={40} priority />
+            </Link>
 
-          {/* Hamburger – zobrazit do velikosti LG */}
-          <button onClick={toggleMenu} className="lg:hidden focus:outline-none text-gray-800 text-4xl" aria-label="Toggle menu">
-            {menuOpen ? "✕" : "☰"}
-          </button>
+            {/* Hamburger – zobrazit do velikosti LG */}
+            <button onClick={toggleMenu} className="lg:hidden focus:outline-none text-gray-800 text-4xl" aria-label="Toggle menu">
+              {menuOpen ? "✕" : "☰"}
+            </button>
 
-          {/* Desktop menu – až od LG */}
-          <nav className="hidden lg:flex flex-wrap gap-x-2 gap-y-2 font-medium max-w-full">
-            {navItems.map((item) => {
-              const isActive = pathname === item.href; // ← tato řádka musí být zde
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`px-3 py-2 rounded transition-colors ${isActive ? "bg-[#9FBEF4] text-black font-bold" : "text-black hover:bg-gray-200"}`}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
-          </nav>
-        </div>
+            {/* Desktop menu – až od LG */}
+            <nav className="hidden lg:flex flex-wrap gap-x-2 gap-y-2 font-medium max-w-full">
+              {navItems.map((item) => {
+                const isActive = pathname === item.href; // ← tato řádka musí být zde
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`px-3 py-2 rounded transition-colors ${isActive ? "bg-[#9FBEF4] text-black font-bold" : "text-black hover:bg-gray-200"}`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </nav>
+          </div>
 
-        {/* Mobile menu */}
+          {/* Mobile menu */}
 
-        {menuOpen && (
-          <nav className="lg:hidden fixed inset-0 bg-white z-40 flex flex-col">
-            <div className="flex-grow flex flex-col justify-evenly items-center text-xl font-semibold text-center px-6 py-10">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={closeMenu}
-                  className={`hover:text-blue-600 transition-colors ${pathname === item.href ? "text-[#009ddc] font-semibold" : "text-gray-800"}`}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </nav>
-        )}
-      </header>
+          {menuOpen && (
+            <nav className="lg:hidden fixed inset-0 bg-white z-40 flex flex-col">
+              <div className="flex-grow flex flex-col justify-evenly items-center text-xl font-semibold text-center px-6 py-10">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={closeMenu}
+                    className={`hover:text-blue-600 transition-colors ${pathname === item.href ? "text-[#009ddc] font-semibold" : "text-gray-800"}`}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </nav>
+          )}
+        </header>
 
-      <main className={mainClass}>{children}</main>
-      <footer className="text-center text-sm py-6 bg-black text-white">
-        © {new Date().getFullYear()} <span className="">Web vyrobil - </span>
-        <a href="https://www.jansladky.eu" target="_blank" className="underline">
-          Jan Sladký
-        </a>
-      </footer>
+        <main className={`${mainClass} flex-grow`}>{children}</main>
+        <footer className="text-center text-sm py-6 bg-[#9FBEF4] text-black">
+          © {new Date().getFullYear()} <span className="">Web vyrobil - </span>
+          <a href="https://www.jansladky.eu" target="_blank" className="underline">
+            Jan Sladký
+          </a>
+        </footer>
+      </div>
     </>
   );
 }
