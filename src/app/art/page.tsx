@@ -129,9 +129,9 @@ export default function ArtPage() {
   const [index, setIndex] = useState(-1);
   return (
     <main className="px-4 py-12 max-w-5xl mx-auto">
-      <section className="py-12 px-4 bg-white text-center">
+      <section className="py-12 px-4 bg-white text-left">
         {/* Carousel referencí */}
-        <h2 className="text-2xl font-semibold mb-8 text-gray-800">Art</h2>
+        <h2 className="text-4xl font-bold text-left mb-8 text-gray-800">Art</h2>
         <p className="text-lg text-gray-700 mb-8 leading-relaxed">
           Má umělecká dráha mě vedla přes studium na místním gymnáziu a poté na ekonomické fakultě ZČU k soukromému podnikání v oboru kosmetické služby a
           vizážistika. Již od útlého věku jsem částečně inklinoval k rozličným výtvarným činnostem, jimiž byly například kreslení, malování, kombinované

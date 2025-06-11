@@ -313,9 +313,9 @@ const images = [
 export default function MakeupPage() {
   const [index, setIndex] = useState(-1);
   return (
-    <main className="px-4 py-12 max-w-5xl mx-auto">
+     <main className="px-4 py-12 max-w-5xl mx-auto">
       <h1 className="text-4xl font-bold text-left mb-8 text-gray-800">Make-up / maskérství</h1>
-      <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+      <p className="text-lg text-left text-gray-700 mb-8 leading-relaxed">
         Nabízíme profesionální make-up a maskérské služby pro každou příležitost. Ať už potřebujete dokonalý make-up na svatbu, večírek, nebo speciální událost,
         nebo hledáte odborníka na filmové, divadelní nebo speciální efekty, jsme tu pro vás. Pracujeme s nejlepšími produkty a technikami, aby jsme vytvořili
         vzhled, který bude nejen krásný, ale také dlouhotrvající. Každý náš klient je pro nás jedinečný, a proto se zaměřujeme na individuální přístup, který

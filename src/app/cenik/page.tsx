@@ -38,9 +38,9 @@ const categories = [
 
 export default function PricelistPage() {
   return (
-    <main className="px-4 py-12 max-w-6xl mx-auto">
-      <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">Ceník</h1>
-      <p className="text-center text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+    <main className="px-4 py-12 max-w-5xl mx-auto">
+      <h1 className="text-4xl font-bold text-left mb-8 text-gray-800">Ceník</h1>
+      <p className="text-left text-lg text-gray-600 mb-12 max-w-2xl">
         Vyberte si konkrétní oblast služby pro zobrazení detailního cenníku. Každá sekce obsahuje rozpis kategorií a cen dle typu ošetření.
       </p>
 

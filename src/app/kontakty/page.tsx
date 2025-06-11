@@ -10,11 +10,13 @@ export default function KontaktyPage() {
       href: "https://www.facebook.com/profile.php?id=100057688155180",
       icon: <FaFacebookF className="text-white text-sm" />,
       alt: "Facebook",
+      bg: "bg-[#1877F2]",
     },
     {
       href: "https://www.instagram.com/kamilpohanka?igsh=Z29sY2FrbWZyNG5t",
       icon: <FaInstagram className="text-white text-sm" />,
       alt: "Instagram",
+      bg: "bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600",
     },
   ];
   const kontakty = [
@@ -45,17 +47,17 @@ export default function KontaktyPage() {
   ];
 
   return (
-    <main className="bg-[#fff] py-12 px-4">
+    <main className="px-4 py-12 max-w-5xl mx-auto">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-10 text-gray-800">Kontakty</h1>
-        <div className="flex justify-center gap-6 mt-6 mb-8">
+        <h1 className="text-4xl font-bold text-left mb-10 text-gray-800">Kontakty</h1>
+        <div className="flex justify-start gap-4 mt-6 mb-8">
           {socialLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-black rounded-full w-8 h-8 flex items-center justify-center"
+              className={`${link.bg} rounded-full w-10 h-10 flex items-center justify-center hover:opacity-80 transition`}
               aria-label={link.alt}
             >
               {link.icon}

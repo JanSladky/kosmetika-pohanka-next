@@ -256,9 +256,9 @@ export default function CenikDetailPage({ params }: { params: Promise<{ id: stri
   const cenik = ceniky[id];
 
   return (
-    <main className="max-w-5xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">{cenik.title}</h1>
-      {cenik.description && <p className="text-lg text-center text-gray-600 mb-10">{cenik.description}</p>}
+     <main className="px-4 py-12 max-w-5xl mx-auto">
+      <h1 className="text-3xl font-bold mb-6 text-left text-gray-800">{cenik.title}</h1>
+      {cenik.description && <p className="text-lg text-left text-gray-600 mb-10">{cenik.description}</p>}
 
       {cenik.sections.map((section) => (
         <AccordionSection key={section.title} title={section.title}>

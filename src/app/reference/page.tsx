@@ -51,9 +51,11 @@ export default function ReferencePage() {
   );
 
   return (
-    <section className="py-12 px-4 bg-white text-center">
-      <h2 className="text-2xl font-semibold mb-8 text-gray-800">Reference</h2>
-      <ReferenceCarousel />
-    </section>
+    <main className="px-4 py-12 max-w-5xl mx-auto">
+      <section className="py-12 px-4 bg-white text-left">
+        <h2 className="text-4xl font-bold text-left mb-8 text-gray-800">Reference</h2>
+        <ReferenceCarousel />
+      </section>
+    </main>
   );
 }

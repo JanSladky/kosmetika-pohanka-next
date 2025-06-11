@@ -20,7 +20,7 @@ export default function RadioliftingPage() {
   const [index, setIndex] = useState(-1); // -1 = zavřeno
 
   return (
-    <main className="px-4 py-12 max-w-5xl mx-auto">
+     <main className="px-4 py-12 max-w-5xl mx-auto">
       <h1 className="text-4xl font-bold text-left mb-8 text-gray-800">Radiofrekvenční lifting</h1>
 
       <p className="text-lg text-gray-700 mb-8 leading-relaxed">
