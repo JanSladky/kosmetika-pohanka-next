@@ -3,9 +3,9 @@ import { ReactNode } from "react";
 import ClientLayout from "./ClientLayout";
 
 export const metadata = {
-  title: "Kosmetické studio Pohanka Žatec",
+  title: "Kosmetické studio Pohanka Žatec | Profesionální péče o pleť",
   description:
-    "Specializujeme se také na profesionální make-up a maskérské služby. Ať už se připravujete na důležitou událost, svatbu nebo chcete jen oslnit svým vzhledem. Od jemného denního líčení až po extravagantní večerní. Jsme připraveni proměnit vaše představy v realitu..",
+    "Kosmetické studio Pohanka v Žatci nabízí make-up, permanentní make-up, ošetření pleti, IPL, radiofrekvenční lifting a další profesionální služby. Přijďte si odpočinout.",
   keywords: [
     "kosmetika Žatec",
     "kosmetické studio",
@@ -23,12 +23,18 @@ export const metadata = {
   metadataBase: new URL("https://www.kosmetikapohanka.cz"),
   openGraph: {
     title: "Kosmetické studio Pohanka Žatec",
-    description:
-      "Profesionální kosmetické služby, make-up, IPL, lifting a další péče v Žatci.",
+    description: "Profesionální kosmetické služby, make-up, IPL, lifting a další péče v Žatci.",
     url: "https://www.kosmetikapohanka.cz",
     siteName: "Kosmetické studio Pohanka",
     locale: "cs_CZ",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kosmetické studio Pohanka",
+    description: "Profesionální make-up a péče o pleť v srdci Žatce.",
+    creator: "@kamilpohanka",
+  },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
