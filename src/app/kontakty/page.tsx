@@ -1,7 +1,7 @@
 "use client";
 
 import { MapPin, Phone, Mail } from "lucide-react";
-import Link from "next/link";
+
 
 export default function KontaktyPage() {
   const kontakty = [

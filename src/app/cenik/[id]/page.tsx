@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import AccordionSection from "@/components/AccordionSection";
-import Link from "next/link";
-import { notFound } from "next/navigation";
+
+
 import CenikDetailButtons from "@/components/CenikDetailButtons";
 
 const ceniky: Record<

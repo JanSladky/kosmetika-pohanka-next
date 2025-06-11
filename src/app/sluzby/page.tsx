@@ -1,5 +1,4 @@
-import ServiceCard from "../../components/ServiceCard";
-import Link from "next/link";
+
 import ServiceList from "../../components/ServiceList";
 
 export default function SluzbyPage() {

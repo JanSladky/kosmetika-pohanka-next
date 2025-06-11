@@ -1,6 +1,5 @@
 "use client";
 
-import { useRef } from "react";
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import Captions from "yet-another-react-lightbox/plugins/captions";

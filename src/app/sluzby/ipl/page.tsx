@@ -6,7 +6,7 @@ import Captions from "yet-another-react-lightbox/plugins/captions";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import { LazyImage } from "../../../components/LazyImage";
-import Skeleton from "../../../components/Skeleton";
+
 import ServiceDetailButtons from "@/components/ServiceDetailButtons";
 
 const images = [

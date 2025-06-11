@@ -2,9 +2,9 @@
 
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { useState } from "react";
+
 import { LazyImage } from "@/components/LazyImage";
-import Link from "next/link";
+
 import ServiceList from "@/components/ServiceList";
 import ReferenceCarousel from "@/components/ReferenceCarousel";
 
