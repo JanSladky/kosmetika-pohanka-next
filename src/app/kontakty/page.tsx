@@ -1,9 +1,22 @@
 "use client";
 
 import { MapPin, Phone, Mail } from "lucide-react";
-
+import Link from "next/link";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 export default function KontaktyPage() {
+  const socialLinks = [
+    {
+      href: "https://www.facebook.com/profile.php?id=100057688155180", // nahraď svým URL
+      icon: "/icons/facebook.svg",
+      alt: "Facebook",
+    },
+    {
+      href: "https://www.instagram.com/kamilpohanka?igsh=Z29sY2FrbWZyNG5t", // nahraď svým URL
+      icon: "/icons/instagram.svg",
+      alt: "Instagram",
+    },
+  ];
   const kontakty = [
     {
       name: "Kamil Pohanka – kosmetické studio",
@@ -35,6 +48,26 @@ export default function KontaktyPage() {
     <main className="bg-[#fff] py-12 px-4">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-10 text-gray-800">Kontakty</h1>
+        <div className="flex justify-center gap-6 mt-6 mb-8">
+          <Link
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-black rounded-full w-8 h-8 flex items-center justify-center"
+            aria-label="Facebook"
+          >
+            <FaFacebookF className="text-white text-sm" />
+          </Link>
+          <Link
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-black rounded-full w-8 h-8 flex items-center justify-center"
+            aria-label="Instagram"
+          >
+            <FaInstagram className="text-white text-sm" />
+          </Link>
+        </div>
 
         <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {kontakty.map((k, i) => (
