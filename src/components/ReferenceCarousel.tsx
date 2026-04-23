@@ -30,6 +30,11 @@ const references = [
       "Salon jsme navštívili s dcerou na doporučení. Chodíme pravidelně na IPL ošetření. A jsme velice spokojeni. Pomohlo nám to vyřešit problémy s hormonálním akné na bradě a s rozšířenými žilkami v oblasti nosu. Velmi příjemné prostředí a profesionální přístup p. Pohanky. Pro dokonalé výsledky je třeba vytrvat a chodit pravidelně.",
     author: "Vacinková - Žatec",
   },
+  {
+    text:
+      "Kosmetické studio pana Pohanky navštěvuji pravidelně každý měsíc kvuli výraznějším problémům s akné. Využívám především IPL metodu a chemický peeling. Obě metody mi snížily výskyt akné a dlouhodobě mi pomáhají k udržování stavu pleti.",
+    author: "Hanka",
+  },
 ];
 
 function AutoplayPlugin(slider: KeenSliderInstance) {

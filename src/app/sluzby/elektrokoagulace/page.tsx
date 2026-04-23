@@ -14,6 +14,11 @@ const images = [
     title: "Elektrokoagulace",
     description: "Elektrokoagulace",
   },
+  {
+    src: "/services/elektrokoagulace/img6.jpg",
+    title: "Elektrokoagulace - výsledek ošetření",
+    description: "Ukázka odstranění fibromů pomocí elektrokoagulace",
+  },
 ];
 
 export default function ElektrokoagulacePage() {
