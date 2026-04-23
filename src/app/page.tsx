@@ -9,8 +9,8 @@ import ServiceList from "@/components/ServiceList";
 import ReferenceCarousel from "@/components/ReferenceCarousel";
 
 const sliderImages = [
-  { src: "/images/carousel/img1.jpg", alt: "Úvodní obrázek 1" },
-  { src: "/images/carousel/img2.jpg", alt: "Úvodní obrázek 2" },
+  { src: "/images/carousel/img2.jpg", alt: "Úvodní obrázek 1" },
+  { src: "/images/carousel/img1.jpg", alt: "Úvodní obrázek 2" },
   { src: "/images/carousel/img3.jpg", alt: "Úvodní obrázek 3" },
 ];
 
