@@ -25,11 +25,6 @@ const categories = [
     image: "/services/permanentnimakeup.jpg",
   },
   {
-    id: "elektrok",
-    title: "Elektrokoagulace",
-    image: "/services/elektrokoagulace.jpg",
-  },
-  {
     id: "radiolifting",
     title: "Radiofrekvenční lifting",
     image: "/services/radiolifting.jpg",

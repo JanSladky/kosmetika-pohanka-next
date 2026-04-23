@@ -229,15 +229,6 @@ const ceniky: Record<
       },
     ],
   },
-  elektrok: {
-    title: "Elektrokoagulace",
-    sections: [
-      {
-        title: "Odstranění kožních útvarů",
-        items: [{ name: "Fibromy, mílie", price: "100 až 200 Kč / dle velikosti /" }],
-      },
-    ],
-  },
   radiolifting: {
     title: "Radiofrekvenční lifting",
     sections: [
